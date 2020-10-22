@@ -1,3 +1,11 @@
-/* .fixed-bottom {
+.fixed-bottom {
     background-color: black;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+/* .active {
+    color: slategray;
 } */

@@ -2,7 +2,7 @@ import React from "react"
 import { NavLink } from "react-router-dom"
 import { Nav, NavItem } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faCloud, faMugHot } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faCloud, faMugHot, faCog } from '@fortawesome/free-solid-svg-icons';
 import "./NavBar.css"
 
 const tabs = [{
@@ -23,7 +23,21 @@ export const NavBar = (props) => {
     return (
         <div>
             {/* Top Bar*/}
-            <nav className="navbar navbar-expand-md navbar-light sticky-top" role="navigation"></nav>
+            <nav className="navbar navbar-expand-md navbar-light sticky-top" role="navigation">
+                <Nav className="w-100">
+                    <div className=" d-flex flex-row justify-content-around w-100">
+                        {
+
+                            <NavLink to={"./settings"} className="nav-link" activeClassName="active">
+                                <div className="row d-flex flex-row justify-content-end">
+                                    <FontAwesomeIcon size="lg" icon={faCog} />
+                                </div>
+                            </NavLink>
+
+                        }
+                    </div>
+                </Nav>
+            </nav>
 
             {/* Bottom Tab Navigator*/}
             <nav className="navbar fixed-bottom navbar-light" role="navigation">
