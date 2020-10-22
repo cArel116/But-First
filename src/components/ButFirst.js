@@ -12,8 +12,8 @@ export const ButFirst = () => (
             if (localStorage.getItem("butFirst_user")) {
                 return (
                     <>
-                        <NavBar />
                         <ApplicationViews />
+                        <NavBar />
                     </>
                 )
             } else {
