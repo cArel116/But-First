@@ -10,14 +10,12 @@ fieldset {
 }
 
 .form--login {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     text-align: left;
-}
-
-.form--login > fieldset > input[type="email"],
-.form--login > fieldset > input[type="password"] {
-    width: 25em;
 }
 
 .label--login {
@@ -25,9 +23,16 @@ fieldset {
     display: inline-block;
 }
 
+.email--fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .form-control {
     display: block;
-    width: 94%;
+    flex-basis: 50%;
+    /* width: 94%; */
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -42,11 +47,22 @@ fieldset {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .container--login {
     text-align: center;
 }
 
-.form--login {
+.logo--img {
+    margin: 7em 0 10em 0;
+}
+
+/* .form--login {
     background-position-x: right;
     background-image: url(logo.png);
     z-index: 1;
@@ -55,7 +71,7 @@ fieldset {
     background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
-}
+} */
 
 .button--close {
     position: relative;

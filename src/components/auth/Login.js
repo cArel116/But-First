@@ -36,16 +36,19 @@ export const Login = props => {
                 <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
             </dialog>
 
+            <section className="logo--img">
+                <img src="../images/ButFirst1.png" alt="But First... Logo" />
+            </section>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>But First...</h1>
-                    <h2>Please Sign In</h2>
+                    {/* <h1>But First...</h1>
+                    <h2>Please Sign In</h2> */}
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email Address </label>
+                        {/* <label htmlFor="inputEmail"> Email Address </label> */}
                         <input ref={email} type="email"
                             id="email"
                             className="form-control"
-                            placeholder="Email address"
+                            placeholder="Email Address"
                             required autoFocus />
                     </fieldset>
                     <fieldset>
