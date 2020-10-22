@@ -37,7 +37,7 @@ export const Login = props => {
             </dialog>
 
             <section className="logo--img">
-                <img src="../images/ButFirst1.png" alt="But First... Logo" />
+                <img src="./logo.png" alt="But First... Logo" />
             </section>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>

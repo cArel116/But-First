@@ -59,19 +59,19 @@ main {
 }
 
 .logo--img {
-    margin: 7em 0 10em 0;
+    margin: 7em 0 5em 0;
 }
 
-/* .form--login {
-    background-position-x: right;
-    background-image: url(logo.png);
+.form--login {
+    /* background-position-x: right; */
+    /* background-image: ; */
     z-index: 1;
     min-height: 25rem;
     min-width: 45rem;
     background-color: hsla(0,0%,100%,0.40);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
-} */
+}
 
 .button--close {
     position: relative;
