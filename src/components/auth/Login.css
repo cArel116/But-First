@@ -59,7 +59,8 @@ main {
 }
 
 .logo--img {
-    margin: 7em 0 5em 0;
+    margin-top: 5em;
+    justify-content: center;
 }
 
 .form--login {

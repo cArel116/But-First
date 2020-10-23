@@ -16,6 +16,8 @@ export const ApplicationViews = (props) => {
             {/* <Route path="/coffee">
                 <BrewMethodCard />
             </Route> */}
+
+
         </>
     )
 }

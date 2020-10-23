@@ -6,6 +6,7 @@ import { Login } from "./auth/Login.js"
 import { Register } from "./auth/Register.js"
 import "./ButFirst.css"
 
+
 export const ButFirst = () => (
     <>
         <Route render={() => {

@@ -1,6 +1,7 @@
 import React, { useRef } from "react"
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
+import logo from "./logo.png"
 import "./Login.css"
 
 
@@ -37,7 +38,7 @@ export const Login = props => {
             </dialog>
 
             <section className="logo--img">
-                <img src="./logo.png" alt="But First... Logo" />
+                <img src={logo} alt="But First... Logo" />
             </section>
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
