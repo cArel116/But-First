@@ -47,7 +47,7 @@ fieldset {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-main {
+.container--login {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -9,3 +9,11 @@
 /* .active {
     color: slategray;
 } */
+
+.top-nav {
+    margin: 1em;
+}
+
+.settingsCog {
+    color: lightgray;
+}

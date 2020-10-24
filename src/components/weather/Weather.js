@@ -9,7 +9,7 @@ const api = {
 export const WeatherApp = () => {
     return (
         <div className="weatherApp">
-            <main>
+            <main className="weather--main">
                 <div className="search-box">
                     <input
                         type="text"

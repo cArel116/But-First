@@ -2,7 +2,54 @@
     color: lightgray;
 }
 
-.main-home {
+.main--home {
     display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center;
+    align-content: center; */
     color: black;
+    height: 550px;
+    /* border: 1px solid green; */
+}
+
+.dailyQuote--homeDiv {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: flex-start;
+    /* border: 1px solid gold; */
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+    margin-top: 0;
+    margin-bottom: 5em;
+}
+
+.dailyQuote--home {
+    /* border: 1px solid black; */
+    font-size: 12px;
+    padding: 1em;
+}
+
+.dailyQuoteSource--home {
+    /* border: 1px solid black; */
+    font-size: 12px;
+    text-align: right;
+}
+
+.localTemp--homeDiv {
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    /* border: 1px solid blue; */
+    width: 100%;
+    padding: 1em;
+}
+
+.localTemp--home {
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 10em;
+    color: gray;
 }
