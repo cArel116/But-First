@@ -10,14 +10,12 @@ fieldset {
 }
 
 .form--login {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     text-align: left;
-}
-
-.form--login > fieldset > input[type="email"],
-.form--login > fieldset > input[type="password"] {
-    width: 25em;
 }
 
 .label--login {
@@ -25,9 +23,16 @@ fieldset {
     display: inline-block;
 }
 
+.email--fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .form-control {
     display: block;
-    width: 94%;
+    flex-basis: 50%;
+    /* width: 94%; */
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -43,12 +48,24 @@ fieldset {
 }
 
 .container--login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container--login {
     text-align: center;
 }
 
+.logo--img {
+    margin-top: 5em;
+    justify-content: center;
+}
+
 .form--login {
-    background-position-x: right;
-    background-image: url(logo.png);
+    /* background-position-x: right; */
+    /* background-image: ; */
     z-index: 1;
     min-height: 25rem;
     min-width: 45rem;

@@ -1,0 +1,21 @@
+.fixed-bottom {
+    background-color: black;
+}
+
+.nav-link {
+    color: whitesmoke;
+}
+
+/* .active {
+    color: slategray;
+} */
+
+.top-nav {
+    margin: 0;
+    padding: 1em;
+    width: auto;
+}
+
+.settingsCog {
+    color: snow;
+}

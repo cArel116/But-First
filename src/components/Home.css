@@ -1,0 +1,67 @@
+/* .nav-link-home {
+    color: lightgray;
+} */
+
+.homePage {
+    background-image: url('../images/cold-bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4 ease-out;
+}
+
+.main--home {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center;
+    align-content: center; */
+    color: black;
+    height: 600px;
+    /* border: 1px solid green; */
+    /* min-height: 100vh; */
+    /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)); */
+    /* padding: 25px; */
+    
+    
+}
+
+.dailyQuote--homeDiv {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-self: flex-start;
+    /* border: 1px solid gold; */
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+}
+
+.dailyQuote--home {
+    /* border: 1px solid black; */
+    font-size: 12px;
+    padding: 1em;
+}
+
+.dailyQuoteSource--home {
+    /* border: 1px solid black; */
+    font-size: 12px;
+    text-align: right;
+    padding-right: 2em;
+}
+
+.localTemp--homeDiv {
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    /* border: 1px solid blue; */
+    width: 100%;
+    padding: 1em;
+    margin: 2em;
+}
+
+.localTemp--home {
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 8em;
+    color: gray;
+}
