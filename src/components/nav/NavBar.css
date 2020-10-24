@@ -11,9 +11,11 @@
 } */
 
 .top-nav {
-    margin: 1em;
+    margin: 0;
+    padding: 1em;
+    width: auto;
 }
 
 .settingsCog {
-    color: lightgray;
+    color: snow;
 }
