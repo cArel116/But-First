@@ -13,8 +13,8 @@ export const ButFirst = () => (
             if (localStorage.getItem("butFirst_user")) {
                 return (
                     <>
-                        <ApplicationViews />
                         <NavBar />
+                        <ApplicationViews />
                     </>
                 )
             } else {

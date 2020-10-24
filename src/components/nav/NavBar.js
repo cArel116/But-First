@@ -22,23 +22,6 @@ const tabs = [{
 export const NavBar = (props) => {
     return (
         <div>
-            {/* Top Bar*/}
-            <nav className="navbar navbar-expand-md navbar-light sticky-top" role="navigation">
-                <Nav className="w-100">
-                    <div className=" d-flex flex-row justify-content-around w-100">
-                        {
-
-                            <NavLink to={"./settings"} className="nav-link" activeClassName="active">
-                                <div className="row d-flex flex-row justify-content-end">
-                                    <FontAwesomeIcon size="lg" icon={faCog} />
-                                </div>
-                            </NavLink>
-
-                        }
-                    </div>
-                </Nav>
-            </nav>
-
             {/* Bottom Tab Navigator*/}
             <nav className="navbar fixed-bottom navbar-light" role="navigation">
                 <Nav className="w-100">
@@ -61,3 +44,26 @@ export const NavBar = (props) => {
         </div>
     )
 };
+
+export const HomeNav = (props) => (
+    <>
+        <div className="top-nav">
+            {/* Top Bar*/}
+            <nav className="navbar navbar-expand-md navbar-light sticky-top" role="navigation">
+                <Nav className="w-100">
+                    <div className=" d-flex flex-row justify-content-around w-100">
+                        {
+
+                            <NavLink to={"./settings"} className="nav-link-home" activeClassName="active">
+                                <div className="row d-flex flex-row justify-content-end">
+                                    <FontAwesomeIcon size="lg" icon={faCog} />
+                                </div>
+                            </NavLink>
+
+                        }
+                    </div>
+                </Nav>
+            </nav>
+        </div>
+    </>
+);
