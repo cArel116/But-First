@@ -30,7 +30,7 @@ export const Home = () => (
             <section className="main--home">
 
                 <div className="localTemp--homeDiv">
-                    <h2 className="localTemp--home">76°</h2>
+                    <h2 className="localTemp--home">58°F</h2>
                 </div>
 
                 <div className="dailyQuote--homeDiv">
