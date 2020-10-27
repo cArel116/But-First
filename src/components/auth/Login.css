@@ -2,6 +2,13 @@
     font-size: 2.5rem;
 }
 
+.loginHome {
+    background-image: url('../../images/but-first1.jpg');
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4 ease-out;
+}
+
 fieldset {
     min-width: 0;
     padding: 1rem 0;
@@ -9,14 +16,14 @@ fieldset {
     border: 0;
 }
 
-.form--login {
+/* .form--login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     text-align: left;
-}
+} */
 
 .label--login {
     width: 8rem;
@@ -49,29 +56,31 @@ fieldset {
 
 .container--login {
     display: flex;
-    flex-direction: column;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));
+    padding: 25px;
 }
 
-.container--login {
-    text-align: center;
+.login {
+    margin-bottom: 4em;
 }
 
 .logo--img {
-    margin-top: 5em;
+    margin-bottom: 8em;
     justify-content: center;
 }
 
-.form--login {
-    /* background-position-x: right; */
-    /* background-image: ; */
-    z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
+.link--register {
+    color: snow;
+    font-size: 14px;
+    font-weight: 300;
+    /* font-style: italic; */
+    text-align: center;
+    text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
 
 .button--close {
