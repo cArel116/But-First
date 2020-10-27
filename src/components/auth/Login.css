@@ -10,7 +10,7 @@
 }
 
 fieldset {
-    min-width: 0;
+    min-width: 300px;
     padding: 1rem 0;
     margin: 0;
     border: 0;
@@ -24,6 +24,16 @@ fieldset {
     margin: 0 auto;
     text-align: left;
 } */
+
+.form--register {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 2em;
+    text-align: left;
+}
 
 .label--login {
     width: 8rem;
@@ -79,7 +89,7 @@ fieldset {
     font-size: 14px;
     font-weight: 300;
     /* font-style: italic; */
-    text-align: center;
+    /* text-align: center; */
     text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
 }
 
@@ -93,3 +103,24 @@ fieldset {
     min-height: 5rem;
 }
 
+.registerHeader {
+    margin: 1.5em 0 1em 0;
+    text-align: center;
+}
+
+.registerButtons {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-top: 1.75em;
+}
+
+button {
+    min-width: 100px;
+    max-width: 3em;
+    border-radius: .5em;
+    margin: .5em;
+}

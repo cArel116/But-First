@@ -57,8 +57,8 @@ export const Register = (props) => {
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
 
-            <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">But First... Register</h1>
+            <form className="form--register" onSubmit={handleRegister}>
+                <h1 className="h3 mb-3 font-weight-normal registerHeader">But First... Register!</h1>
                 <fieldset>
                     <label htmlFor="firstName"> First Name </label>
                     <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
@@ -75,11 +75,12 @@ export const Register = (props) => {
                     <label htmlFor="inputEmail"> Email address </label>
                     <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
                 </fieldset>
-                <fieldset>
+                <div className="registerButtons">
                     <button type="submit"> Register </button>
-                </fieldset>
+                    <button onClick={e => history.push("/Login")}> Cancel </button>
+                </div>
             </form>
-        </main>
+        </main >
     )
 }
 
