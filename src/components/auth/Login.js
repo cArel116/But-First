@@ -31,38 +31,38 @@ export const Login = props => {
     }
 
     return (
-        <main className="container--login">
-            <dialog className="dialog dialog--auth" ref={existDialog}>
-                <div>User does not exist!</div>
-                <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
-            </dialog>
+        <div className="loginHome">
+            <main className="container--login">
+                <dialog className="dialog dialog--auth" ref={existDialog}>
+                    <div>User does not exist!</div>
+                    <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
+                </dialog>
 
-            <section className="logo--img">
-                <img src={logo} alt="But First... Logo" />
-            </section>
-            <section>
-                <form className="form--login" onSubmit={handleLogin}>
-                    {/* <h1>But First...</h1>
-                    <h2>Please Sign In</h2> */}
-                    <fieldset>
-                        {/* <label htmlFor="inputEmail"> Email Address </label> */}
-                        <input ref={email} type="email"
-                            id="email"
-                            className="form-control"
-                            placeholder="Email Address"
-                            required autoFocus />
-                    </fieldset>
-                    <fieldset>
-                        <button type="submit">
-                            Sign In
+                <section className="logo--img">
+                    <img src={logo} alt="But First... Logo" />
+                </section>
+                <section className="login">
+                    <form className="form--login" onSubmit={handleLogin}>
+                        <fieldset>
+                            <input ref={email} type="email"
+                                id="email"
+                                className="form-control"
+                                placeholder="Email Address"
+                                required autoFocus />
+                        </fieldset>
+                        <section className="link--register">
+                            <Link to="/register">Not registered yet?</Link>
+                        </section>
+                        <fieldset>
+                            <button type="submit">
+                                Sign In
                         </button>
-                    </fieldset>
-                </form>
-            </section>
-            <section className="link--register">
-                <Link to="/register">Not registered yet?</Link>
-            </section>
-        </main>
+                        </fieldset>
+                    </form>
+                </section>
+
+            </main>
+        </div>
     )
 }
 
