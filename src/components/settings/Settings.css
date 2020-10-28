@@ -1,3 +1,11 @@
+.settingsBackgroundImg {
+    background-image: url('../../images/coffeeShelf.jpg');
+    background-size: cover;
+    background-position: bottom;
+    transition: 0.4 ease-out;
+    background-attachment: fixed;
+}
+
 .form--settings {
     display: flex;
     flex-flow: column;
@@ -14,9 +22,11 @@
 }
 
 .settingsHeaders {
-    font-size: 25px;
+    font-size: 21px;
     text-align: center;
     margin: 0;
+    color: snow;
+    text-shadow: 1px 1px black;
 }
 
 input {
@@ -29,6 +39,8 @@ input {
 .or {
     text-align: center;
     margin: 0;
+    color: snow;
+    text-shadow: 1px 1px black;
 }
 
 .settingsButton {

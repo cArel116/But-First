@@ -1,8 +1,8 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { Coffee } from "./coffee/Coffee"
 import { Home } from "./Home"
 import { Settings } from "./settings/Settings"
-// import { SettingsNav } from "./nav/NavBar"
 import { WeatherApp } from "./weather/Weather"
 
 
@@ -16,6 +16,10 @@ export const ApplicationViews = (props) => {
 
             <Route exact path="/settings">
                 <Settings />
+            </Route>
+
+            <Route exact path="/coffee">
+                <Coffee />
             </Route>
 
             <Route exact path="/weather">

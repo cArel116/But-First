@@ -51,7 +51,7 @@ export const Login = props => {
                                 required autoFocus />
                         </fieldset>
                         <section className="link--register">
-                            <Link to="/register">Not registered yet?</Link>
+                            <Link to="/register" className="registerLink">Not registered yet?</Link>
                         </section>
                         <fieldset>
                             <button type="submit">
