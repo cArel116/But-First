@@ -4,6 +4,7 @@
 
 .homePage {
     background-image: url('../images/cold-bg.jpg');
+    /* background-image: url('../images/but-first1.jpg'); */
     background-size: cover;
     background-position: bottom;
     transition: 0.4 ease-out;

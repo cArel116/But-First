@@ -8,15 +8,15 @@ import "./NavBar.css"
 const tabs = [{
     route: "/coffee",
     icon: faMugHot,
-    label: "Coffee"
+    // label: "Coffee"
 }, {
     route: "/",
     icon: faHome,
-    label: "Home"
+    // label: "Home"
 }, {
     route: "/weather",
     icon: faCloud,
-    label: "Weather"
+    // label: "Weather"
 }]
 
 

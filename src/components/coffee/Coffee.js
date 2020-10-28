@@ -18,6 +18,12 @@ export const Coffee = () => {
                         <div className="brewMethod"><img src={Espresso} /></div>
                         <div className="brewMethod"><img src={Chemex} /></div>
                     </section>
+                    <section className="currentBrewSettings">
+                        {/* <div>Brew Method: </div>
+                        <div>Water Amount: </div>
+                        <div>Grams of Coffee: </div> */}
+                        <div className="savedBrew">24oz | 42g</div>
+                    </section>
                 </div>
             </div>
         </div>

@@ -29,6 +29,7 @@
     margin: 0;
     color: snow;
     text-shadow: 2px 4px rgba(50, 50, 70, 0.5);
+    /* text-shadow: 1px 1px black; */
 }
 
 fieldset {
@@ -54,6 +55,7 @@ input {
     margin: 0;
     color: snow;
     text-shadow: 2px 4px rgba(50, 50, 70, 0.5);
+    /* text-shadow: 1px 1px black; */
 }
 
 .settingsButton {
