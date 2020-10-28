@@ -9,6 +9,16 @@
     transition: 0.4 ease-out;
 }
 
+/* unvisited link */
+.registerLink:link {
+    color: snow;
+  }
+  
+/* mouse over link */
+.registerLink:hover {
+color: blue;
+}
+
 fieldset {
     min-width: 300px;
     padding: 1rem 0;
@@ -85,8 +95,7 @@ fieldset {
     justify-content: center;
 }
 
-.link--register {
-    color: snow;
+.registerLink {
     font-size: 14px;
     font-weight: 300;
     /* font-style: italic; */
