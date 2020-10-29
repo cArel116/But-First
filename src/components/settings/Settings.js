@@ -1,13 +1,14 @@
 import React, { useRef } from "react"
 import { useHistory } from "react-router-dom"
+import Button from 'react-bootstrap/Button';
 import "../nav/NavBar.css"
 import "./Settings.css"
 
 export const Settings = (props) => {
-    const coffeeSettings = useRef()
-    const localWeatherSettings = useRef()
-    const dailyQuoteSettings = useRef()
-    const history = useHistory()
+    // const coffeeSettings = useRef()
+    // const localWeatherSettings = useRef()
+    // const dailyQuoteSettings = useRef()
+    // const history = useHistory()
 
     const handleRegister = (e) => {
         e.preventDefault()
@@ -54,7 +55,7 @@ export const Settings = (props) => {
                                 </fieldset>
                             </div>
                             <div className="settingsButton">
-                                <button type="submit"> Save </button>
+                                <Button variant="outline-primary" type="submit"> Save </Button>
                                 {/* <button onClick={e => history.push("/Login")}> Cancel </button> */}
                             </div>
                         </div>

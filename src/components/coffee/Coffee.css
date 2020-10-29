@@ -1,18 +1,24 @@
 .coffeeMain {
-    background-image: url('../../images/morningcoffee.jpg');
+    /* background-image: url('../../images/morningcoffee.jpg'); */
+    background-image: url('../../images/cold-bg.jpg');
     background-size: cover;
     background-position: bottom;
     transition: 0.4 ease-out;
 }
 
-.quadrantImg {
+/* .quadrantImg {
     background-image: url('../../images/But\ First\ Quadrant.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-position-y: 6em;
-}
+    background-position-y: 9em;
+} */
 
 .coffeeHome {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75));    
     min-height: 100vh;
     padding: 25px;
@@ -25,8 +31,10 @@
     justify-content: space-evenly;
     align-items: center;
     min-height: 265px;
-    margin-top: 3em;
+    margin-top: 4em;
     padding-bottom: .5em;
+    min-width: 300px;
+    max-width: 300px;
 }
 
 .brewMethod {
@@ -39,19 +47,36 @@
     max-width: 40%;
     max-height: 110px;
     min-height: 110px;
-
-    /* padding: 15px 25px; */
-
-    color: #FFF;
-    font-size: 102px;
-    font-weight: 900;
-
-    text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
-    text-align: center;
     box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+    border: none;
 }
 
 .brewMethod > img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.currentBrewSettings {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+
+    margin-bottom: 3em;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    border-radius: 16px;
+    min-width: 300px;
+    max-width: 300px;
+
+    padding: 15px 25px;
+
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 24px;
+    font-weight: 900;
+
+    /* text-shadow: 1px 2px rgba(50, 50, 70, 0.5); */
+    text-align: center;
+    /* box-shadow: 3px 6px rgba(0, 0, 0, 0.2); */
 }

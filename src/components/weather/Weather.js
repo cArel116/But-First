@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
 import "./Weather.css"
 
 export const api = {
     key: "be83c66a552cdf75a46cb29c6e903fd5",
     base: "https://api.openweathermap.org/data/2.5/"
 }
+
+export const WeatherContext = createContext()
 
 export const WeatherApp = () => {
     const [query, setQuery] = useState('');
@@ -23,8 +25,8 @@ export const WeatherApp = () => {
     }
 
     return (
-        <div className={(typeof weather.main !== "undefined") ? ((weather.main.temp > 60) ? 'weatherApp warm' : 'weatherApp') : 'weatherApp'
-        }>
+
+        <div className={(typeof weather.main !== "undefined") ? ((weather.main.temp > 60) ? 'weatherApp warm' : 'weatherApp') : 'weatherApp'}>
             <section className="weather--main">
                 <div className="search-box">
                     <input
@@ -50,6 +52,7 @@ export const WeatherApp = () => {
                     </div>
                 ) : ('')}
             </section>
-        </div >
+        </div>
+
     )
 }
