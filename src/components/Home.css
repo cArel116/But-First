@@ -31,24 +31,7 @@
     justify-content: center;
     width: 100%;
     padding: 1em;
-}
-
-.dailyQuote--home {
-    color: snow;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: left;
-    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
-    padding-left: 1em;
-}
-
-.dailyQuoteSource--home {
-    color: snow;
-    font-size: 14px;
-    font-weight: 500;
-    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
-    text-align: right;
-    padding-right: 1em;
+    margin-top: 1em;
 }
 
 .date {

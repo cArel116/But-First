@@ -20,87 +20,36 @@ export const Coffee = () => {
         <div className="coffeeMain">
             <div className="quadrantImg">
                 <div className="coffeeHome">
+
                     <section className="brewSelectionArea">
 
                         <Button className="brewMethod" variant="primary" onClick={handleShow}>
-                            <img src={FrenchPress} />
+                            <img src={FrenchPress} alt="French Press Icon" />
                         </Button>
                         <Modal show={show} onHide={handleClose}>
                             <Modal.Header closeButton>
-                                <Modal.Title>Modal heading</Modal.Title>
+                                <Modal.Title>French Press</Modal.Title>
                             </Modal.Header>
-                            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                            <Modal.Body>
+                                <fieldset>
+                                    <input type="number" name="waterAmount" className="form-control" placeholder="Ounces of Water (e.g. 24)" />
+                                </fieldset>
+                            </Modal.Body>
                             <Modal.Footer>
-                                {/* <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button> */}
-                                <Button variant="primary" onClick={handleClose}>
-                                    Save
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
 
-                        <Button className="brewMethod" variant="primary" onClick={handleShow}>
-                            <img src={Drip} />
-                        </Button>
-                        <Modal show={show} onHide={handleClose}>
-                            <Modal.Header closeButton>
-                                <Modal.Title>Modal heading</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                            <Modal.Footer>
-                                {/* <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button> */}
-                                <Button variant="primary" onClick={handleClose}>
-                                    Save
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-
-                        <Button className="brewMethod" variant="primary" onClick={handleShow}>
-                            <img src={Espresso} />
-                        </Button>
-                        <Modal show={show} onHide={handleClose}>
-                            <Modal.Header closeButton>
-                                <Modal.Title>Modal heading</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                            <Modal.Footer>
-                                {/* <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button> */}
-                                <Button variant="primary" onClick={handleClose}>
-                                    Save
-                                </Button>
-                            </Modal.Footer>
-                        </Modal>
-
-                        <Button className="brewMethod" variant="primary" onClick={handleShow}>
-                            <img src={Chemex} />
-                        </Button>
-                        <Modal show={show} onHide={handleClose}>
-                            <Modal.Header closeButton>
-                                <Modal.Title>Modal heading</Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                            <Modal.Footer>
-                                {/* <Button variant="secondary" onClick={handleClose}>
-                                    Close
-                                </Button> */}
-                                <Button variant="primary" onClick={handleClose}>
-                                    Save
+                                <Button variant="primary" size="sm" block onClick={handleClose}>
+                                    Calculate
                                 </Button>
                             </Modal.Footer>
                         </Modal>
 
                     </section>
+
+
                     <section className="currentBrewSettings">
-                        {/* <div>Brew Method: </div>
-                        <div>Water Amount: </div>
-                        <div>Grams of Coffee: </div> */}
                         <div className="savedBrew">24oz | 42g</div>
                     </section>
+
                 </div>
             </div>
         </div >

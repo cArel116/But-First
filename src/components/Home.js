@@ -5,9 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import "../components/nav/NavBar.css"
 import "./Home.css"
+import FetchQuote from "./quote/QuoteProvider";
+
 
 export const Home = () => {
 
+    const quote = FetchQuote();
 
     const dateBuilder = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -51,8 +54,8 @@ export const Home = () => {
                     </div>
 
                     <div className="dailyQuote--homeDiv">
-                        <h2 className="dailyQuote--home">"This is how God loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life."</h2>
-                        <h3 className="dailyQuoteSource--home">- John 3:16, ESV</h3>
+                        <h2 className="dailyQuote--home">{quote}</h2>
+                        {/* <h3 className="dailyQuoteSource--home">- ${author}</h3> */}
                     </div>
 
                 </section>

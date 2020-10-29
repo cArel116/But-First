@@ -2,6 +2,7 @@ import React, { useRef } from "react"
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
 import logo from "./logo.png"
+import Button from 'react-bootstrap/Button';
 import "./Login.css"
 
 
@@ -54,9 +55,9 @@ export const Login = props => {
                             <Link to="/register" className="registerLink">Not registered yet?</Link>
                         </section>
                         <fieldset>
-                            <button type="submit">
+                            <Button className="button--signIn" type="submit" variant="outline-primary" size="sm">
                                 Sign In
-                        </button>
+                        </Button>
                         </fieldset>
                     </form>
                 </section>

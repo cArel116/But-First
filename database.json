@@ -1,19 +1,88 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct.",
+      "email": "hhall123@hannah.com"
+    },
+    {
+      "name": "Colin Arel",
+      "email": "romans_one16@live.com",
+      "address": "21000 Middleton Cir., Apt. 21207",
+      "id": 2
     }
   ],
-  "comments": [
+  "quotes": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "quote": "If you're going to carry a sword, you'd better know how to use it.",
+      "author": "Arathaín Cúthalion"
+    },
+    {
+      "id": 2,
+      "quote": "No man preaches his sermon well to others if he doth not first preach it to his own heart.",
+      "author": "John Owen"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "coffee": [
+    {
+      "id": 1,
+      "name": "French Press",
+      "method": "frenchPress",
+      "img": ""
+    },
+    {
+      "id": 2,
+      "name": "Drip",
+      "method": "drip",
+      "img": "drip.png"
+    },
+    {
+      "id": 3,
+      "name": "Espresso",
+      "method": "espresso",
+      "img": "espresso.png"
+    },
+    {
+      "id": 4,
+      "name": "Pour Over",
+      "method": "pourOver",
+      "img": "chemex.png"
+    }
+  ],
+  "userSettings": [
+    {
+      "userId": 2,
+      "settings": [
+        {
+          "coffeeSettings": [
+            {
+              "id": 1,
+              "name": "A.M. Brew",
+              "settings": [
+                {
+                  "water": 24,
+                  "method": "drip"
+                }
+              ]
+            }
+          ],
+          "localWeatherSettings": [
+            {
+              "city": "Franklin",
+              "state": "TN",
+              "zip": "37064",
+              "country": "US"
+            }
+          ],
+          "dailyQuoteSettings": [
+            {
+              "source": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
