@@ -14,6 +14,8 @@ export const Settings = (props) => {
         e.preventDefault()
     }
 
+    const history = useHistory();
+
     return (
         <main style={{ textAlign: "center" }}>
 
@@ -55,8 +57,7 @@ export const Settings = (props) => {
                                 </fieldset>
                             </div>
                             <div className="settingsButton">
-                                <Button variant="outline-primary" type="submit"> Save </Button>
-                                {/* <button onClick={e => history.push("/Login")}> Cancel </button> */}
+                                <Button variant="outline-primary" type="submit" onClick={e => history.push("/")}> Save </Button>
                             </div>
                         </div>
                     </form>

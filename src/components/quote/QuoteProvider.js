@@ -40,12 +40,18 @@ function FetchQuote() {
                 <p className="dailyQuoteSource--home">- {author}</p>
             </button>
             <Modal show={show} onHide={handleClose}>
-                <Modal.Body closeButton>
-                    <h2 className="dailyQuote--home">{quote}</h2>
-                    <p className="dailyQuoteSource--home">- {author}</p>
+                <Modal.Body>
+                    <h2 className="dailyQuote--modal">{quote}</h2>
+                    <p className="dailyQuoteSource--modal">- {author}</p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" size="sm" block onClick={handleClose}>
+                    <Button variant="primary" size="sm">
+                        Edit
+                    </Button>
+                    <Button variant="primary" size="sm">
+                        Delete
+                    </Button>
+                    <Button variant="primary" size="sm" onClick={handleClose}>
                         Close
                     </Button>
                 </Modal.Footer>

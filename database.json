@@ -23,6 +23,11 @@
       "id": 2,
       "quote": "No man preaches his sermon well to others if he doth not first preach it to his own heart.",
       "author": "John Owen"
+    },
+    {
+      "id": 3,
+      "quote": "Those who would give up essential liberty to purchase a little temporary safety, deserve neither liberty nor safety.",
+      "author": "Benjamin Franklin"
     }
   ],
   "coffee": [
@@ -63,7 +68,8 @@
               "settings": [
                 {
                   "water": 24,
-                  "method": "drip"
+                  "grams": 42,
+                  "method": "Drip"
                 }
               ]
             }
