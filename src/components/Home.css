@@ -2,6 +2,7 @@
     color: lightgray;
 } */
 
+
 .homePage {
     background-image: url('../images/cold-bg.jpg');
     /* background-image: url('../images/but-first1.jpg'); */
@@ -59,8 +60,9 @@
     padding: 15px 25px;
 
     color: snow;
-    font-size: 100px;
+    font-size: 90px;
     font-weight: 900;
+    font-family: 'Source Code Pro', sans-serif;
 
     text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
     text-align: center;

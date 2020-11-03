@@ -1,27 +1,75 @@
-import React, { useRef } from "react"
-import { useHistory } from "react-router-dom"
+import React, { useContext, useEffect, useState } from "react"
+import { useHistory, useParams } from "react-router-dom"
 import Button from 'react-bootstrap/Button';
 import "../nav/NavBar.css"
 import "./Settings.css"
+import { LocalWeatherContext } from "../weather/LocalWeatherProvider"
 
 export const Settings = (props) => {
-    // const coffeeSettings = useRef()
-    // const localWeatherSettings = useRef()
-    // const dailyQuoteSettings = useRef()
-    // const history = useHistory()
+    const { addLocalWeather, getLocalWeather, getLocalWeatherById, updateLocalWeather } = useContext(LocalWeatherContext)
 
-    const handleRegister = (e) => {
-        e.preventDefault()
+
+    const [localWeather, setLocalWeather] = useState({})
+    const [isLoading, setIsLoading] = useState(true);
+
+    const { localWeatherId } = useParams();
+    const history = useHistory();
+
+    const handleControlledInputChange = (e) => {
+        const newLocalWeather = { ...localWeather }
+        newLocalWeather[e.target.name] = e.target.value
+        setLocalWeather(newLocalWeather)
     }
 
-    const history = useHistory();
+    useEffect(() => {
+        getLocalWeather().then(() => {
+            if (localWeatherId) {
+                getLocalWeatherById(localWeatherId)
+                    .then(localWeather => {
+                        setLocalWeather(localWeather)
+                        setIsLoading(false)
+                    })
+            } else {
+                setIsLoading(false)
+            }
+        })
+    }, [])
+
+    const constructLocalWeatherObject = () => {
+        if ((localWeather.id) === 0) {
+            window.alert("Please select a weather location")
+        } else {
+            //disable the button - no extra clicks
+            setIsLoading(true);
+            if (localWeatherId) {
+                //PUT - update
+                updateLocalWeather({
+                    id: localWeather.id,
+                    city: localWeather.city,
+                    state: localWeather.state,
+                    country: localWeather.country,
+                    zip: localWeather.zip
+                })
+                    .then(() => history.push(`/userSettings/settings/localWeatherSettings/${localWeather.id}`))
+            } else {
+                //POST - add
+                addLocalWeather({
+                    city: localWeather.city,
+                    state: localWeather.state,
+                    country: localWeather.country,
+                    zip: localWeather.zip
+                })
+                    .then(() => history.push("/userSettings/settings/localWeatherSettings"))
+            }
+        }
+    }
 
     return (
         <main style={{ textAlign: "center" }}>
 
             <div className="settingsBackgroundImg">
                 <div className="backgroundFilter">
-                    <form className="form--settings" onSubmit={handleRegister}>
+                    <form className="form--settings" onSubmit={handleControlledInputChange}>
                         <div className="wrapperDiv">
                             <div className="coffeeSettings">
                                 <h2 className="settingsHeaders">Coffee Settings</h2>
@@ -57,7 +105,13 @@ export const Settings = (props) => {
                                 </fieldset>
                             </div>
                             <div className="settingsButton">
-                                <Button variant="outline-primary" type="submit" onClick={e => history.push("/")}> Save </Button>
+                                <Button variant="outline-primary"
+                                    type="submit"
+                                    disabled={isLoading}
+                                    onClick={event => {
+                                        event.preventDefault() // Prevent browser from submitting the form
+                                        constructLocalWeatherObject()
+                                    }}> Save </Button>
                             </div>
                         </div>
                     </form>

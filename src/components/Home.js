@@ -50,7 +50,7 @@ export const Home = () => {
 
                     <div className="date">{dateBuilder(new Date())}</div>
                     <div className="localTemp--homeDiv">
-                        <h2 className="localTemp--home">58°F</h2>
+                        <h2 className="localTemp--home">48°F</h2>
                     </div>
 
                     <div className="dailyQuote--homeDiv">
