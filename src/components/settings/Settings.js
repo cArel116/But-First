@@ -95,24 +95,7 @@ export const Settings = (props) => {
                             </div>
 
 
-                            <div className="weatherSettings">
-                                <h2 className="settingsHeaders">Weather Settings</h2>
-                                <fieldset>
-                                    <input type="text" name="weatherCity" className="form-control" placeholder="City"
-                                        onChange={handleControlledInputChange}
-                                        defaultValue={localWeather.city} />
-                                    <input type="text" name="weatherState" className="form-control" placeholder="State"
-                                        onChange={handleControlledInputChange}
-                                        defaultValue={localWeather.state} />
-                                    <input type="text" name="weatherCountry" className="form-control" placeholder="Country"
-                                        onChange={handleControlledInputChange}
-                                        defaultValue={localWeather.country} />
-                                    <p className="or"> - OR - </p>
-                                    <input type="text" name="weatherZip" className="form-control" placeholder="Zip"
-                                        onChange={handleControlledInputChange}
-                                        defaultValue={localWeather.zip} />
-                                </fieldset>
-                            </div>
+                            <div className="weatherSettings"></div>
 
                             {/* <div className="quoteSettings">
                                 <h2 className="settingsHeaders">Daily Quote Settings</h2>

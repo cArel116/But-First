@@ -7,6 +7,9 @@ import { Home } from "./Home"
 import { Settings } from "./settings/Settings"
 import { WeatherApp } from "./weather/Weather"
 import { QuoteProvider } from "./quote/QuoteProvider"
+import { QuoteForm } from "./quote/QuoteForm"
+import { QuoteDetail } from "./quote/QuoteDetail"
+import { LocalWeatherForm } from "./weather/LocalWeatherForm"
 
 
 export const ApplicationViews = (props) => {
@@ -17,9 +20,17 @@ export const ApplicationViews = (props) => {
                 <Home />
             </Route>
 
-            <Route exact path="/quotes/edit/:quoteId(\d+)">
-                <QuoteProvider />
-            </Route>
+            <QuoteProvider>
+                <Route exact path="/quotes/detail/:quoteId(\d+)">
+                    <QuoteDetail />
+                </Route>
+            </QuoteProvider>
+
+            <QuoteProvider>
+                <Route exact path="/quotes/edit/:quoteId(\d+)">
+                    <QuoteForm />
+                </Route>
+            </QuoteProvider>
 
             <Route exact path="/settings">
                 <Settings />
@@ -27,7 +38,7 @@ export const ApplicationViews = (props) => {
 
             <LocalWeatherProvider>
                 <Route path="/settings/edit/:localWeatherId(\d+)">
-                    <Settings />
+                    <LocalWeatherForm />
                 </Route>
             </LocalWeatherProvider>
 
