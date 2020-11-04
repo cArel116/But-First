@@ -11,7 +11,7 @@ export const LocalWeatherProvider = (props) => {
             .then(setLocalWeather)
     }
 
-    const addLocalWeather = weatherObj => {
+    const addLocalWeather = (weatherObj) => {
         return fetch("http://localhost:8088/userSettings/settings/localWeatherSettings", {
             method: "POST",
             headers: {

@@ -21,6 +21,14 @@ export const Settings = (props) => {
         setLocalWeather(newLocalWeather)
     }
 
+    // const handleControlledInputChange = (e) => {
+    //     const value = e.target.value;
+    //     setState({
+    //         ...state,
+    //         [e.target.name]: value
+    //     });
+    // }
+
     useEffect(() => {
         getLocalWeather().then(() => {
             if (localWeatherId) {
@@ -90,20 +98,28 @@ export const Settings = (props) => {
                             <div className="weatherSettings">
                                 <h2 className="settingsHeaders">Weather Settings</h2>
                                 <fieldset>
-                                    <input type="text" name="weatherCity" className="form-control" placeholder="City" />
-                                    <input type="text" name="weatherState" className="form-control" placeholder="State" />
-                                    <input type="text" name="weatherCountry" className="form-control" placeholder="Country" />
+                                    <input type="text" name="weatherCity" className="form-control" placeholder="City"
+                                        onChange={handleControlledInputChange}
+                                        defaultValue={localWeather.city} />
+                                    <input type="text" name="weatherState" className="form-control" placeholder="State"
+                                        onChange={handleControlledInputChange}
+                                        defaultValue={localWeather.state} />
+                                    <input type="text" name="weatherCountry" className="form-control" placeholder="Country"
+                                        onChange={handleControlledInputChange}
+                                        defaultValue={localWeather.country} />
                                     <p className="or"> - OR - </p>
-                                    <input type="text" name="weatherZip" className="form-control" placeholder="Zip" />
+                                    <input type="text" name="weatherZip" className="form-control" placeholder="Zip"
+                                        onChange={handleControlledInputChange}
+                                        defaultValue={localWeather.zip} />
                                 </fieldset>
                             </div>
 
-                            <div className="quoteSettings">
+                            {/* <div className="quoteSettings">
                                 <h2 className="settingsHeaders">Daily Quote Settings</h2>
                                 <fieldset>
                                     <input type="text" name="quoteSource" className="form-control" placeholder="Source..." />
                                 </fieldset>
-                            </div>
+                            </div> */}
                             <div className="settingsButton">
                                 <Button variant="outline-primary"
                                     type="submit"
@@ -112,6 +128,10 @@ export const Settings = (props) => {
                                         event.preventDefault() // Prevent browser from submitting the form
                                         constructLocalWeatherObject()
                                     }}> Save </Button>
+
+                                <Button variant="outline-primary"
+                                    type="button"
+                                    onClick={e => localStorage.clear(), history.push("/Login")}> Logout </Button>
                             </div>
                         </div>
                     </form>

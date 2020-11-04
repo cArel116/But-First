@@ -5,18 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import "../components/nav/NavBar.css"
 import "./Home.css"
-import FetchQuote from "./quote/QuoteProvider";
+import { QuoteProvider } from "./quote/QuoteProvider";
 
 
 export const Home = () => {
 
     const [weather, setWeather] = useState({});
 
-    const quote = FetchQuote();
-    const city = `http://localhost:8088/userSettings/settings/localWeatherSettings/${city}`
-    const state = `http://localhost:8088/userSettings/settings/localWeatherSettings/${state}`
-    const country = `http://localhost:8088/userSettings/settings/localWeatherSettings/${country}`
-    const zip = `http://localhost:8088/userSettings/settings/localWeatherSettings/${zip}`
+    const quote = QuoteProvider();
+    // const city = `http://localhost:8088/userSettings/settings/localWeatherSettings/${city}`
+    // const state = `http://localhost:8088/userSettings/settings/localWeatherSettings/${state}`
+    // const country = `http://localhost:8088/userSettings/settings/localWeatherSettings/${country}`
+    // const zip = `http://localhost:8088/userSettings/settings/localWeatherSettings/${zip}`
 
     const dateBuilder = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -56,11 +56,12 @@ export const Home = () => {
 
                     <div className="date">{dateBuilder(new Date())}</div>
                     <div className="localTemp--homeDiv">
-                        <h2 className="localTemp--home" onLoad={() =>
+                        {/* <h2 className="localTemp--home" onLoad={() =>
                             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&${state}&${country}||zip=${zip})&appid=be83c66a552cdf75a46cb29c6e903fd5`) //**IF YOU WANT FORECAST, IT GOES IN THE WEATHER?Q= LINE TO THE LEFT**
                                 .then(res => res.json())
                                 .then(setWeather)}>
-                            {Math.round(weather.main.temp)}°F</h2>
+                            {Math.round(weather.main.temp)}°F</h2> */}
+                        <h2 className="localTemp--home">59°F</h2>
                     </div>
 
                     <div className="dailyQuote--homeDiv">

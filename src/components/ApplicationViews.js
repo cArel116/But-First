@@ -6,6 +6,7 @@ import { LocalWeatherProvider } from "./weather/LocalWeatherProvider"
 import { Home } from "./Home"
 import { Settings } from "./settings/Settings"
 import { WeatherApp } from "./weather/Weather"
+import { QuoteProvider } from "./quote/QuoteProvider"
 
 
 export const ApplicationViews = (props) => {
@@ -14,6 +15,10 @@ export const ApplicationViews = (props) => {
             {/* Render the location list when http://localhost:3000/ */}
             <Route exact path="/">
                 <Home />
+            </Route>
+
+            <Route exact path="/quotes/edit/:quoteId(\d+)">
+                <QuoteProvider />
             </Route>
 
             <Route exact path="/settings">
