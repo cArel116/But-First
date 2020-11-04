@@ -16,9 +16,11 @@ export const ApplicationViews = (props) => {
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
-            <Route exact path="/">
-                <Home />
-            </Route>
+            <QuoteProvider>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+            </QuoteProvider>
 
             <QuoteProvider>
                 <Route exact path="/quotes/detail/:quoteId(\d+)">

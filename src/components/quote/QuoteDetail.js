@@ -20,13 +20,24 @@ export const QuoteDetail = () => {
     const history = useHistory();
 
     useEffect(() => {
-        console.log("useEffect", quoteId)
-        getQuoteById(quoteId)
-            .then((response) => {
-                setQuote(response)
-                setAuthor(response.author)
-            })
+        getQuote();
+        const intervalID = setInterval(() => {
+            getQuote()
+        }, 24 * 60 * 60 * 1000);
+        return () => {
+            clearInterval(intervalID);
+        }
     }, [])
+
+    function getQuote() {
+        fetch('http://localhost:8088/quotes')
+            .then(res => res.json())
+            .then(quotes => {
+                console.log("quote", quotes[0]);
+                setQuote(quotes[0].quote);
+                setAuthor(quotes[0].author);
+            })
+    }
 
     return (
         <>
