@@ -48,12 +48,12 @@ export const Settings = (props) => {
                                 </fieldset>
                             </div>
 
-                            <div className="quoteSettings">
+                            {/* <div className="quoteSettings">
                                 <h2 className="settingsHeaders">Daily Quote Settings</h2>
                                 <fieldset>
                                     <input type="text" name="quoteSource" className="form-control" placeholder="Source..." />
                                 </fieldset>
-                            </div>
+                            </div> */}
                             <div className="settingsButton">
                                 <Button variant="outline-primary" type="submit"> Save </Button>
                                 {/* <button onClick={e => history.push("/Login")}> Cancel </button> */}

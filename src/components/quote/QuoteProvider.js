@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
+import { useHistory } from "react-router-dom"
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import "./Quote.css"
 
-function FetchQuote() {
+function QuoteProvider() {
     const [quote, setQuote] = useState("");
     // const [loading, setLoading] = useState(true);
     const [author, setAuthor] = useState("");
@@ -12,6 +13,12 @@ function FetchQuote() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    //-----------------------------------------//----------------------------------------//
+
+    const history = useHistory();
+
+    //-----------------------------------------//----------------------------------------//
 
     useEffect(() => {
         getQuote();
@@ -33,6 +40,36 @@ function FetchQuote() {
             })
     }
 
+    //     return (
+    //         <>
+    //             <button className="quoteButton" onClick={handleShow}>
+    //                 <h2 className="dailyQuote--home">{quote}</h2>
+    //                 <p className="dailyQuoteSource--home">- {author}</p>
+    //             </button>
+    //             <Modal show={show} onHide={handleClose}>
+    //                 <Modal.Body closeButton>
+    //                     <h2 className="dailyQuote--home">{quote}</h2>
+    //                     <p className="dailyQuoteSource--home">- {author}</p>
+    //                 </Modal.Body>
+    //                 <Modal.Footer>
+    //                     <Button variant="primary" size="sm" block onClick={handleClose}>
+    //                         Close
+    //                     </Button>
+    //                 </Modal.Footer>
+    //             </Modal>
+    //         </>
+    //     )
+    // }
+
+    //--------------------------------------//----------------------------------------------//
+
+    const deleteQuote = id => {
+        return fetch(`http://localhost:8088/quotes/${id}`, {
+            method: "DELETE"
+        })
+            .then(getQuote)
+    }
+
     return (
         <>
             <button className="quoteButton" onClick={handleShow}>
@@ -40,12 +77,28 @@ function FetchQuote() {
                 <p className="dailyQuoteSource--home">- {author}</p>
             </button>
             <Modal show={show} onHide={handleClose}>
-                <Modal.Body closeButton>
-                    <h2 className="dailyQuote--home">{quote}</h2>
-                    <p className="dailyQuoteSource--home">- {author}</p>
+                <Modal.Body>
+                    <h2 className="dailyQuote--modal">{quote}</h2>
+                    <p className="dailyQuoteSource--modal">- {author}</p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" size="sm" block onClick={handleClose}>
+                    <Button variant="primary" size="sm" onClick={() => {
+                        history.push(`/quotes/edit/${quote.id}`)
+                    }}>
+                        Edit
+                    </Button>
+                    <Button variant="primary" size="sm"
+                        onClick={
+                            () => {
+                                deleteQuote(quote.id)
+                                    .then(() => {
+                                        history.push("/quotes")
+                                    })
+                            }
+                        }>
+                        Delete
+                    </Button>
+                    <Button variant="primary" size="sm" onClick={handleClose}>
                         Close
                     </Button>
                 </Modal.Footer>
@@ -53,4 +106,7 @@ function FetchQuote() {
         </>
     )
 }
-export default FetchQuote
+
+//------------------------------------//--------------------------------------//
+
+export default QuoteProvider

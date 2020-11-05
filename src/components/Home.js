@@ -5,12 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import "../components/nav/NavBar.css"
 import "./Home.css"
-import FetchQuote from "./quote/QuoteProvider";
+import QuoteProvider from "./quote/QuoteProvider";
 
 
 export const Home = () => {
 
-    const quote = FetchQuote();
+    const quote = QuoteProvider();
 
     const dateBuilder = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
