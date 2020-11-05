@@ -23,7 +23,7 @@ export const Login = props => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("butFirst_user", exists.id)
+                    localStorage.setItem("user", exists.id)
                     history.push("/")
                 } else {
                     existDialog.current.showModal()

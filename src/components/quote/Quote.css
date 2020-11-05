@@ -1,4 +1,4 @@
-.quoteButton {
+.quoteDiv {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -10,9 +10,9 @@
     border: none;
 }
 
-.quoteButton:focus {
+/* .quoteButton:focus {
     outline: none;
-}
+} */
 
 .dailyQuote--home {
     color: snow;
