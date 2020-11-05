@@ -16,15 +16,16 @@ export const BrewMethodList = () => {
         <div className="coffeeMain">
             <div className="quadrantImg">
                 <div className="coffeeHome">
-                    {
-                        brewMethod.map(coffee => {
-                            return <CoffeeCard key={coffee.id} coffee={coffee} />
-                        })
-                    }
+                    <section className="brewSelectionArea">
+                        {
+                            brewMethod.map(coffee => {
+                                return <CoffeeCard key={coffee.id} coffee={coffee} />
+                            })
+                        }
+                    </section>
                     <section className="currentBrewSettings">
                         <div className="savedBrew">24oz | 42g</div>
                     </section>
-
                 </div>
             </div>
         </div >

@@ -30,25 +30,25 @@
       "id": 1,
       "name": "French Press",
       "method": "frenchPress",
-      "img": ""
+      "img": "/images/frenchpress.png"
     },
     {
       "id": 2,
       "name": "Drip",
       "method": "drip",
-      "img": "drip.png"
+      "img": "/images/drip.png"
     },
     {
       "id": 3,
       "name": "Espresso",
       "method": "espresso",
-      "img": "espresso.png"
+      "img": "/images/espresso.png"
     },
     {
       "id": 4,
       "name": "Pour Over",
       "method": "pourOver",
-      "img": "chemex.png"
+      "img": "/images/chemex.png"
     }
   ],
   "userSettings": [
