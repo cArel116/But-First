@@ -10,35 +10,8 @@ export const WeatherContext = createContext()
 
 export const WeatherApp = () => {
 
-    // const userId = parseInt(localStorage.getItem("user"))
-
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
-    // const [localWeather, setLocalWeather] = useState({});
-
-    //-----------------------------------//------------------------------------//
-
-    // const getUserWeather = () => {
-    //     return fetch(`http://localhost:8088/userSettings/settings/localWeatherSettings/${userId}`)
-    //         .then(res => res.json())
-    // }
-
-    // const getLocalWeather = () => {
-    //     getUserWeather()
-    //         .then(() => {
-    //             return fetch(`${api.base}weather?q=${localWeather}&units=imperial&APPID=${api.key}`)
-    //                 .then(res => res.json())
-    //                 .then(result => {
-    //                     setLocalWeather(result);
-    //                 });
-    //         })
-    // }
-
-    // useEffect(() => {
-    //     getLocalWeather({})
-    // }, [])
-    //----------------------------------//------------------------------------//
-
 
     const search = evt => {
         if (evt.key === "Enter") {
@@ -83,3 +56,46 @@ export const WeatherApp = () => {
         </div>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // const userId = parseInt(localStorage.getItem("user"))
+
+
+
+// const [localWeather, setLocalWeather] = useState({});
+
+    //-----------------------------------//------------------------------------//
+
+    // const getUserWeather = () => {
+    //     return fetch(`http://localhost:8088/userSettings/settings/localWeatherSettings/${userId}`)
+    //         .then(res => res.json())
+    // }
+
+    // const getLocalWeather = () => {
+    //     getUserWeather()
+    //         .then(() => {
+    //             return fetch(`${api.base}weather?q=${localWeather}&units=imperial&APPID=${api.key}`)
+    //                 .then(res => res.json())
+    //                 .then(result => {
+    //                     setLocalWeather(result);
+    //                 });
+    //         })
+    // }
+
+    // useEffect(() => {
+    //     getLocalWeather({})
+    // }, [])
+    //----------------------------------//------------------------------------//

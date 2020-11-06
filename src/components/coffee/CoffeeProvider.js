@@ -16,10 +16,32 @@ export const BrewMethodProvider = (props) => {
             .then(res => res.json())
     }
 
+    const addBrewMethod = brewMethodObj => {
+        return fetch("http://localhost:8088/userSettings/coffeeSettings", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(brewMethodObj)
+        })
+            .then(getBrewMethod)
+    }
+
+    const updateBrewMethod = brewMethod => {
+        return fetch(`http://localhost:8088/userSettings/coffeeSettings/${brewMethod.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(brewMethod)
+        })
+            .then(getBrewMethod)
+    }
+
     return (
 
         <BrewMethodContext.Provider value={{
-            brewMethod, getBrewMethod, getBrewMethodById
+            brewMethod, getBrewMethod, getBrewMethodById, addBrewMethod, updateBrewMethod
         }}>
             {props.children}
         </BrewMethodContext.Provider>
