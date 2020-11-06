@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import "./Coffee.css"
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
@@ -8,28 +8,24 @@ import Image from 'react-bootstrap/Image'
 export const CoffeeCard = ({ coffee }) => {
 
     const [show, setShow] = useState(false);
+    const [selectedBrew, setSelectedBrew] = useState({
+        brewId: coffee.id,
+        grams: 0
+    })
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    // const handleCalculate = (waterAmount) => {
-    //     if (coffee.id === 1) {
-    //         grams = (waterAmount * 28) / 16;
-    //     }
-    //     else if (coffee.id === 2) {
-    //         grams = (waterAmount * 28) / 15;
-    //     }
-    //     else if (coffee.id === 3) {
-    //         grams = (waterAmount * 28) / 2;
-    //     }
-    //     else if (coffee.id === 4) {
-    //         grams = (waterAmount * 28) / 17;
-    //     }
-    //     else {
-    //         grams = "Umm... Looks like something's missing..."
-    //     }
-    // }
+    const waterInput = useRef(null)
 
-    // console.log(grams);
+
+
+    const handleCalculatedInput = (event) => {
+        const gramsOutput = (waterInput.current.value * 28) / coffee.ratio
+        console.log("waterInput", waterInput.current.value)
+        const newSelectedBrewMethod = { ...selectedBrew }
+        newSelectedBrewMethod.grams = gramsOutput
+        setSelectedBrew(newSelectedBrewMethod)
+    }
 
     return (
         <>
@@ -42,15 +38,19 @@ export const CoffeeCard = ({ coffee }) => {
                 </Modal.Header>
                 <Modal.Body>
                     <fieldset>
-                        <input type="number" name="waterAmount" className="form-control" placeholder="Ounces of Water (e.g. 24)" />
+                        <input type="number" name="water" className="form-control"
+                            placeholder="Ounces of Water (i.e. 24)"
+                            ref={waterInput} />
                     </fieldset>
                     <h5 className="modal--heading">Grams of Coffee: </h5>
                     <fieldset className="result--readOnly">
-                        <input type="number" className="form-control" readOnly />
+                        <input type="number" name="grams" className="form-control"
+                            value={selectedBrew.grams}
+                            readOnly />
                     </fieldset>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="primary" size="sm" block onClick={handleClose}>
+                    <Button variant="primary" size="sm" block onClick={handleCalculatedInput}>
                         Calculate
                     </Button>
                 </Modal.Footer>

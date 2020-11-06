@@ -6,13 +6,13 @@ export const BrewMethodProvider = (props) => {
     const [brewMethod, setBrewMethod] = useState([])
 
     const getBrewMethod = () => {
-        return fetch("http://localhost:8088/coffee")
+        return fetch("http://localhost:8088/coffees")
             .then(res => res.json())
             .then(setBrewMethod)
     }
 
     const getBrewMethodById = (id) => {
-        return fetch(`http://localhost:8088/coffee/${id}`)
+        return fetch(`http://localhost:8088/coffees/${id}`)
             .then(res => res.json())
     }
 
