@@ -1,5 +1,5 @@
 {
-  "users": [
+  "user": [
     {
       "id": 1,
       "name": "Hannah Hall",
@@ -17,12 +17,20 @@
     {
       "id": 1,
       "quote": "If you're going to carry a sword, you'd better know how to use it.",
-      "author": "Arathaín Cúthalion"
+      "author": "Arathaín Cúthalion",
+      "userId": 2
     },
     {
       "id": 2,
       "quote": "No man preaches his sermon well to others if he doth not first preach it to his own heart.",
-      "author": "John Owen"
+      "author": "John Owen",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "quote": "Peace if possible, truth at all costs!",
+      "author": "Martin Luther",
+      "userId": 2
     }
   ],
   "coffee": [
@@ -54,33 +62,22 @@
   "userSettings": [
     {
       "userId": 2,
-      "settings": [
+      "coffeeSettings": [
         {
-          "coffeeSettings": [
-            {
-              "id": 1,
-              "name": "A.M. Brew",
-              "settings": [
-                {
-                  "water": 24,
-                  "method": "drip"
-                }
-              ]
-            }
-          ],
-          "localWeatherSettings": [
-            {
-              "city": "Franklin",
-              "state": "TN",
-              "zip": "37064",
-              "country": "US"
-            }
-          ],
-          "dailyQuoteSettings": [
-            {
-              "source": ""
-            }
-          ]
+          "id": 1,
+          "name": "A.M. Brew",
+          "water": "24oz",
+          "grams": "42g",
+          "method": "Drip"
+        }
+      ],
+      "localWeatherSettings": [
+        {
+          "id": 1,
+          "city": "Franklin",
+          "state": "TN",
+          "zip": "37064",
+          "country": "US"
         }
       ]
     }

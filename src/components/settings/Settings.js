@@ -3,66 +3,34 @@ import { useHistory } from "react-router-dom"
 import Button from 'react-bootstrap/Button';
 import "../nav/NavBar.css"
 import "./Settings.css"
+import { LocalWeatherForm } from "../weather/LocalWeatherForm";
+import { BrewMethodForm } from "../coffee/CoffeeForm";
 
-export const Settings = (props) => {
-    // const coffeeSettings = useRef()
-    // const localWeatherSettings = useRef()
-    // const dailyQuoteSettings = useRef()
-    // const history = useHistory()
+export const Settings = () => {
 
-    const handleRegister = (e) => {
-        e.preventDefault()
-    }
+    const localWeatherSettings = LocalWeatherForm();
+    const brewMethodSettings = BrewMethodForm();
+
+    const history = useHistory();
 
     return (
         <main style={{ textAlign: "center" }}>
-
             <div className="settingsBackgroundImg">
                 <div className="backgroundFilter">
-                    <form className="form--settings" onSubmit={handleRegister}>
+                    <form className="form--settings" >
                         <div className="wrapperDiv">
-                            <div className="coffeeSettings">
-                                <h2 className="settingsHeaders">Coffee Settings</h2>
-                                <fieldset>
-                                    <input type="text" name="coffeeProfileName" className="form-control" placeholder="Profile Name" autoFocus />
-                                    <select className="brewMethodDropdown">
-                                        <option> Select Brew Method </option>
-                                        <option value="Drip"> Drip </option>
-                                        <option value="Espresso"> Espresso </option>
-                                        <option value="French Press"> French Press </option>
-                                        <option value="Percolator"> Percolator </option>
-                                    </select>
-                                    <input type="number" name="waterAmount" className="form-control" placeholder="Ounces of Water (e.g. 24)" />
-                                </fieldset>
-                            </div>
-
-
-                            <div className="weatherSettings">
-                                <h2 className="settingsHeaders">Weather Settings</h2>
-                                <fieldset>
-                                    <input type="text" name="weatherCity" className="form-control" placeholder="City" />
-                                    <input type="text" name="weatherState" className="form-control" placeholder="State" />
-                                    <input type="text" name="weatherCountry" className="form-control" placeholder="Country" />
-                                    <p className="or"> - OR - </p>
-                                    <input type="text" name="weatherZip" className="form-control" placeholder="Zip" />
-                                </fieldset>
-                            </div>
-
-                            <div className="quoteSettings">
-                                <h2 className="settingsHeaders">Daily Quote Settings</h2>
-                                <fieldset>
-                                    <input type="text" name="quoteSource" className="form-control" placeholder="Source..." />
-                                </fieldset>
-                            </div>
+                            <div className="coffeeSettings">{brewMethodSettings}</div>
+                            <div className="weatherSettings">{localWeatherSettings}</div>
                             <div className="settingsButton">
-                                <Button variant="outline-primary" type="submit"> Save </Button>
-                                {/* <button onClick={e => history.push("/Login")}> Cancel </button> */}
+                                <Button variant="outline-primary" size="sm"
+                                    onClick={e => history.push("/")} block>
+                                    Cancel
+                                </Button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-
         </main >
     )
 }

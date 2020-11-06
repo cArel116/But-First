@@ -5,12 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import "../components/nav/NavBar.css"
 import "./Home.css"
-import FetchQuote from "./quote/QuoteProvider";
+import { QuoteProvider } from "./quote/QuoteProvider";
+// import { LocalWeatherProvider } from "./weather/LocalWeatherProvider";
 
 
 export const Home = () => {
 
-    const quote = FetchQuote();
+    const quote = QuoteProvider();
+    // const localWeather = LocalWeatherProvider();
 
     const dateBuilder = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -49,13 +51,14 @@ export const Home = () => {
                 <section className="main--home">
 
                     <div className="date">{dateBuilder(new Date())}</div>
+
                     <div className="localTemp--homeDiv">
+                        {/* <h2 className="localTemp--home">{localWeather}°F</h2> */}
                         <h2 className="localTemp--home">58°F</h2>
                     </div>
 
                     <div className="dailyQuote--homeDiv">
                         <h2 className="dailyQuote--home">{quote}</h2>
-                        {/* <h3 className="dailyQuoteSource--home">- ${author}</h3> */}
                     </div>
 
                 </section>

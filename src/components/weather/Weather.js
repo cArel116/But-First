@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import "./Weather.css"
 
 export const api = {
@@ -9,6 +9,7 @@ export const api = {
 export const WeatherContext = createContext()
 
 export const WeatherApp = () => {
+
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
 
@@ -53,6 +54,48 @@ export const WeatherApp = () => {
                 ) : ('')}
             </section>
         </div>
-
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ // const userId = parseInt(localStorage.getItem("user"))
+
+
+
+// const [localWeather, setLocalWeather] = useState({});
+
+    //-----------------------------------//------------------------------------//
+
+    // const getUserWeather = () => {
+    //     return fetch(`http://localhost:8088/userSettings/settings/localWeatherSettings/${userId}`)
+    //         .then(res => res.json())
+    // }
+
+    // const getLocalWeather = () => {
+    //     getUserWeather()
+    //         .then(() => {
+    //             return fetch(`${api.base}weather?q=${localWeather}&units=imperial&APPID=${api.key}`)
+    //                 .then(res => res.json())
+    //                 .then(result => {
+    //                     setLocalWeather(result);
+    //                 });
+    //         })
+    // }
+
+    // useEffect(() => {
+    //     getLocalWeather({})
+    // }, [])
+    //----------------------------------//------------------------------------//

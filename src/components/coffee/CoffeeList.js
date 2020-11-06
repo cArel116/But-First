@@ -24,7 +24,9 @@ export const BrewMethodList = () => {
                         }
                     </section>
                     <section className="currentBrewSettings">
-                        <div className="savedBrew">24oz | 42g</div>
+                        <h3 className="savedBrewh3">Current Profile</h3>
+                        <div className="savedBrewSpecs">24oz | 42g</div>
+                        <div className="savedBrewMethod">Drip</div>
                     </section>
                 </div>
             </div>
