@@ -36,12 +36,6 @@ export const QuoteProvider = (props) => {
                 <h2 className="dailyQuote--home">{quote}</h2>
                 <p className="dailyQuoteSource--home">- {author}</p>
             </div>
-
-            {/* <QuoteContext.Provider value={{
-                quote, getQuote
-            }}>
-                {props.children}
-            </QuoteContext.Provider> */}
         </>
     )
 

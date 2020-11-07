@@ -21,9 +21,10 @@ export const Settings = () => {
                         <div className="wrapperDiv">
                             <div className="coffeeSettings">{brewMethodSettings}</div>
                             <div className="weatherSettings">{localWeatherSettings}</div>
-                            <div className="settingsButton">
+                            <div>
                                 <Button variant="outline-primary" size="sm"
-                                    onClick={e => history.push("/")} block>
+                                    className="settingsButton"
+                                    onClick={e => history.push("/")}>
                                     Cancel
                                 </Button>
                             </div>

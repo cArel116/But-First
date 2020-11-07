@@ -27,7 +27,7 @@ export const WeatherApp = () => {
 
     return (
 
-        <div className={(typeof weather.main !== "undefined") ? ((weather.main.temp > 60) ? 'weatherApp warm' : 'weatherApp') : 'weatherApp'}>
+        <div className={(typeof weather.main !== "undefined") ? ((weather.main.temp > 70) ? 'weatherApp warm' : 'weatherApp') : 'weatherApp'}>
             <section className="weather--main">
                 <div className="search-box">
                     <input

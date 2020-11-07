@@ -39,7 +39,7 @@ export const CoffeeCard = ({ coffee }) => {
                 <Modal.Body>
                     <fieldset>
                         <input type="number" name="water" className="form-control"
-                            placeholder="Ounces of Water (i.e. 24)"
+                            placeholder="Ounces of Water (e.g. 24)"
                             ref={waterInput} />
                     </fieldset>
                     <h5 className="modal--heading">Grams of Coffee: </h5>
