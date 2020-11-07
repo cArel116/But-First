@@ -92,14 +92,15 @@ export const LocalWeatherForm = () => {
                     defaultValue={localWeather.zip} />
             </fieldset>
 
-            <div className="settingsButton">
+            <div>
                 <Button variant="outline-primary"
+                    className="settingsButton"
                     size="sm"
                     disabled={isLoading}
                     onClick={event => {
                         event.preventDefault() // Prevent browser from submitting the form
                         constructLocalWeatherObject()
-                    }} block>
+                    }}>
                     Save Location
                 </Button>
             </div>

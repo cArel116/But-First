@@ -14,13 +14,13 @@ export const LocalWeatherProvider = (props) => {
 
 
     const getLocalWeather = () => {
-        return fetch("http://localhost:8088/userSettings/localWeatherSettings")
+        return fetch("http://localhost:8088/localWeatherSettings")
             .then(res => res.json())
             .then(setLocalWeather)
     }
 
     const addLocalWeather = localWeatherObj => {
-        return fetch("http://localhost:8088/userSettings/localWeatherSettings", {
+        return fetch("http://localhost:8088/localWeatherSettings", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -31,7 +31,7 @@ export const LocalWeatherProvider = (props) => {
     }
 
     const getLocalWeatherById = (id) => {
-        return fetch(`http://localhost:8088/userSettings/localWeatherSettings/${id}`)
+        return fetch(`http://localhost:8088/localWeatherSettings/${id}`)
             .then(res => res.json())
     }
 

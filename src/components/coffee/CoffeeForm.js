@@ -29,7 +29,7 @@ export const BrewMethodForm = () => {
         setBrewMethod(newBrewMethod)
     }
 
-    // Get customers and animals. If brewMethodId is in the URL, getBrewMethodById
+    // If brewMethodId is in the URL, getBrewMethodById
     useEffect(() => {
         getBrewMethod().then(() => {
             if (brewMethodId) {
@@ -92,15 +92,16 @@ export const BrewMethodForm = () => {
                     defaultValue={brewMethod.water} />
             </fieldset>
 
-            <div className="settingsButton">
+            <div>
                 <Button variant="outline-primary"
+                    className="settingsButton"
                     size="sm"
                     disabled={isLoading}
                     onClick={event => {
                         event.preventDefault() // Prevent browser from submitting the form
                         constructBrewMethodObject()
-                    }} block>
-                    Save Brew Method
+                    }}>
+                    Save Method
                 </Button>
             </div>
         </>
