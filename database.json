@@ -77,22 +77,16 @@
       "grams": "42g",
       "method": "Drip",
       "userId": 2
-    },
-    {
-      "id": 2
     }
   ],
   "localWeatherSettings": [
     {
       "id": 1,
-      "city": "Franklin",
-      "state": "TN",
-      "zip": "37064",
+      "city": "Richmond",
+      "state": "KY",
+      "zip": "40475",
       "country": "US",
       "userId": 2
-    },
-    {
-      "id": 2
     }
   ]
 }

@@ -66,6 +66,7 @@ input {
     min-height: 30px;
     max-height: 50px;
     padding: 1px;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .brewMethodDropdown {

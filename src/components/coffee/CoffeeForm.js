@@ -93,7 +93,7 @@ export const BrewMethodForm = () => {
             </fieldset>
 
             <div>
-                <Button variant="outline-primary"
+                <Button variant="primary"
                     className="settingsButton"
                     size="sm"
                     disabled={isLoading}

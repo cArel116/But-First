@@ -12,11 +12,15 @@ export const LocalWeatherContext = createContext()
 export const LocalWeatherProvider = (props) => {
     const [localWeather, setLocalWeather] = useState([])
 
-
     const getLocalWeather = () => {
         return fetch("http://localhost:8088/localWeatherSettings")
             .then(res => res.json())
             .then(setLocalWeather)
+    }
+
+    const getLocalWeatherWithoutState = () => {
+        return fetch("http://localhost:8088/localWeatherSettings")
+            .then(res => res.json())
     }
 
     const addLocalWeather = localWeatherObj => {
@@ -35,9 +39,10 @@ export const LocalWeatherProvider = (props) => {
             .then(res => res.json())
     }
 
-    const updateLocalWeather = localWeather => {
-        return fetch(`http://localhost:8088/localWeatherSettings/${localWeather.id}`, {
-            method: "PUT",
+    const updateLocalWeather = (id, localWeather) => {
+        console.log("local weather", localWeather)
+        return fetch(`http://localhost:8088/localWeatherSettings/${id}`, {
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -49,7 +54,7 @@ export const LocalWeatherProvider = (props) => {
     return (
         <>
             <LocalWeatherContext.Provider value={{
-                localWeather, getLocalWeather, getLocalWeatherById, addLocalWeather, updateLocalWeather
+                localWeather, getLocalWeather, getLocalWeatherWithoutState, getLocalWeatherById, addLocalWeather, updateLocalWeather
             }}>
                 {props.children}
             </LocalWeatherContext.Provider>

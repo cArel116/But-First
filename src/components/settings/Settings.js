@@ -22,7 +22,7 @@ export const Settings = () => {
                             <div className="coffeeSettings">{brewMethodSettings}</div>
                             <div className="weatherSettings">{localWeatherSettings}</div>
                             <div>
-                                <Button variant="outline-primary" size="sm"
+                                <Button variant="primary" size="sm"
                                     className="settingsButton"
                                     onClick={e => history.push("/")}>
                                     Cancel

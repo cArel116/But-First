@@ -23,18 +23,16 @@ export const ApplicationViews = (props) => {
                     <Route exact path="/settings">
                         <Settings />
                     </Route>
+
+                    <Route exact path="/coffee">
+                        <BrewMethodList />
+                    </Route>
+
+                    <Route exact path="/weather">
+                        <WeatherApp />
+                    </Route>
                 </LocalWeatherProvider>
             </BrewMethodProvider>
-
-            <BrewMethodProvider>
-                <Route exact path="/coffee">
-                    <BrewMethodList />
-                </Route>
-            </BrewMethodProvider>
-
-            <Route exact path="/weather">
-                <WeatherApp />
-            </Route>
         </>
     )
 }
