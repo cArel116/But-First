@@ -4,6 +4,11 @@ import React, { useState, createContext, useEffect } from "react"
     The context is imported and used by individual components
     that need data
 */
+export const api = {
+    key: "be83c66a552cdf75a46cb29c6e903fd5",
+    base: "https://api.openweathermap.org/data/2.5/"
+}
+
 export const LocalWeatherContext = createContext()
 
 /*

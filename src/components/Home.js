@@ -6,13 +6,14 @@ import { faCog } from '@fortawesome/free-solid-svg-icons';
 import "../components/nav/NavBar.css"
 import "./Home.css"
 import { QuoteProvider } from "./quote/QuoteProvider";
+import { LocalWeather } from "./weather/LocalWeatherCard";
 // import { LocalWeatherProvider } from "./weather/LocalWeatherProvider";
 
 
 export const Home = () => {
 
     const quote = QuoteProvider();
-    // const localWeather = LocalWeatherProvider();
+    const localWeather = LocalWeather();
 
     const dateBuilder = (d) => {
         let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -53,7 +54,7 @@ export const Home = () => {
                     <div className="date">{dateBuilder(new Date())}</div>
 
                     <div className="localTemp--homeDiv">
-                        <h2 className="localTemp--home">58°F</h2>
+                        <h2>{localWeather}</h2>
                     </div>
 
                     <div className="dailyQuote--homeDiv">

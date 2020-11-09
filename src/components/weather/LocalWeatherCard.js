@@ -1,35 +1,35 @@
-// import React, { useEffect } from "react"
-// import { LocalWeatherContext } from "./LocalWeatherProvider";
-// import "./Weather.css"
+import React, { useContext, useState, useEffect } from "react"
+import { LocalWeatherContext, api } from "./LocalWeatherProvider";
+import "./Weather.css"
 
-// export const LocalWeather = () => {
-//     const { getLocalWeatherById } = useContext(LocalWeatherContext)
-//     const [localWeather, setLocalWeather] = useState({});
+export const LocalWeather = () => {
+    const [weather, setWeather] = useState({
+        main: { temp: 0 }
+    });
+    const { getLocalWeatherWithoutState } = useContext(LocalWeatherContext);
 
-//     const { localWeatherId } = useParams();
+    useEffect(() => {
+        getLocalWeatherWithoutState().then((response) => {
+            fetch(`${api.base}weather?q=${response[0].city}&units=imperial&APPID=${api.key}`) //**IF YOU WANT FORECAST, IT GOES IN THE WEATHER?Q= LINE TO THE LEFT**
+                .then(res => res.json())
+                .then(result => {
+                    setWeather(result);
+                    console.log(result);
+                });
+        })
+    }, [])
 
-//     useEffect(() => {
-//         getLocalWeatherById(localWeatherId)
-//             .then(() => {
-//                 fetch(`${api.base}weather?q=${localWeather.city},${localWeather.state},${localWeather.country},${localWeather.zip}&units=imperial&APPID=${api.key}`)
-//             })
-//             .then((response) => {
-//                 setLocalWeather(response);
-//                 console.log(response);
-//             });
-//     }, [])
-
-//     return (
-//         <section className="localWeather">
-//             <div className="location-box">
-//                 <div className="location">{localWeather.name}, {localWeather.sys.country}</div>
-//             </div>
-//             <div className="weather-box">
-//                 <div className="temp">
-//                     {Math.round(localWeather.main.temp)}°F
-//                 </div>
-//                 <div className="weather">{localWeather.weather[0].main}</div>
-//             </div>
-//         </section>
-//     )
-// }
+    return (
+        <section className="localWeather">
+            {/* <div className="location-box">
+                <div className="location">{weather.name}, {weather.sys.country}</div>
+            </div> */}
+            <div className="weather-box">
+                <div className="temp">
+                    {Math.round(weather.main.temp)}°F
+                </div>
+                {/* <div className="weather">{weather.weather[0].main}</div> */}
+            </div>
+        </section>
+    )
+}

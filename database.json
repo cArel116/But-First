@@ -82,10 +82,10 @@
   "localWeatherSettings": [
     {
       "id": 1,
-      "city": "olathe",
-      "state": "kansas",
-      "zip": "66061",
-      "country": "united states",
+      "city": "Franklin",
+      "state": "TENNESSEE",
+      "zip": "37064",
+      "country": "United States",
       "userId": 2
     }
   ]
