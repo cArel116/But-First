@@ -10,7 +10,7 @@ import "./ButFirst.css"
 export const ButFirst = () => (
     <>
         <Route render={() => {
-            if (localStorage.getItem("butFirst_user")) {
+            if (localStorage.getItem("user")) {
                 return (
                     <>
                         <NavBar />

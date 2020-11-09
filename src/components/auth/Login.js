@@ -55,7 +55,7 @@ export const Login = props => {
                             <Link to="/register" className="registerLink">Not registered yet?</Link>
                         </section>
                         <fieldset>
-                            <Button className="button--signIn" type="submit" variant="outline-primary" size="sm">
+                            <Button className="button--signIn" type="submit" variant="primary" size="sm">
                                 Sign In
                         </Button>
                         </fieldset>

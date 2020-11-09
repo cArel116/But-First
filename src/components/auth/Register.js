@@ -75,8 +75,8 @@ export const Register = (props) => {
                             <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
                         </fieldset>
                         <div className="registerButtons">
-                            <Button className="register--register" type="submit" size="sm" variant="outline-primary" block> Register </Button>
-                            <Button className="register--cancel" size="sm" variant="outline-primary" block onClick={e => history.push("/Login")}> Cancel </Button>
+                            <Button className="register--register" type="submit" size="sm" variant="primary" block> Register </Button>
+                            <Button className="register--cancel" size="sm" variant="primary" block onClick={e => history.push("/Login")}> Cancel </Button>
                         </div>
                     </form>
                 </main >

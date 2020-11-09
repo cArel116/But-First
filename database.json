@@ -16,18 +16,24 @@
   "quotes": [
     {
       "id": 1,
+      "quote": "The best confidence builder is experience.",
+      "author": "Star Wars: The Clone Wars",
+      "userId": 2
+    },
+    {
+      "id": 2,
       "quote": "If you're going to carry a sword, you'd better know how to use it.",
       "author": "Arathaín Cúthalion",
       "userId": 2
     },
     {
-      "id": 2,
+      "id": 3,
       "quote": "No man preaches his sermon well to others if he doth not first preach it to his own heart.",
       "author": "John Owen",
       "userId": 2
     },
     {
-      "id": 3,
+      "id": 4,
       "quote": "Peace if possible, truth at all costs!",
       "author": "Martin Luther",
       "userId": 2
@@ -71,6 +77,9 @@
       "grams": "42g",
       "method": "Drip",
       "userId": 2
+    },
+    {
+      "id": 2
     }
   ],
   "localWeatherSettings": [
