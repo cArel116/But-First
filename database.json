@@ -82,10 +82,10 @@
   "localWeatherSettings": [
     {
       "id": 1,
-      "city": "Richmond",
-      "state": "KY",
-      "zip": "40475",
-      "country": "US",
+      "city": "olathe",
+      "state": "kansas",
+      "zip": "66061",
+      "country": "united states",
       "userId": 2
     }
   ]

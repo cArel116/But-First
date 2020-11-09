@@ -30,7 +30,7 @@ export const WeatherApp = () => {
 
     useEffect(() => {
         getLocalWeatherWithoutState().then((response) => {
-            fetch(`${api.base}weather?q=${response[0].zip}&units=imperial&APPID=${api.key}`) //**IF YOU WANT FORECAST, IT GOES IN THE WEATHER?Q= LINE TO THE LEFT**
+            fetch(`${api.base}weather?q=${response[0].city}&units=imperial&APPID=${api.key}`) //**IF YOU WANT FORECAST, IT GOES IN THE WEATHER?Q= LINE TO THE LEFT**
                 .then(res => res.json())
                 .then(result => {
                     setWeather(result);
