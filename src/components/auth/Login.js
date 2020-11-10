@@ -57,7 +57,7 @@ export const Login = props => {
                         <fieldset>
                             <Button className="button--signIn" type="submit" variant="primary" size="sm">
                                 Sign In
-                        </Button>
+                            </Button>
                         </fieldset>
                     </form>
                 </section>

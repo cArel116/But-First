@@ -19,7 +19,7 @@
 
 .wrapperDiv {
     text-align: center;
-    height: 750px;
+    height: 900px;
     overflow-y: scroll;
 }
 
@@ -92,4 +92,8 @@ input {
 
 .weatherSettingsHeader {
     margin-top: 1.5em;
+}
+
+.logout {
+    margin-top: 4.5em;
 }

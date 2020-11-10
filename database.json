@@ -11,6 +11,12 @@
       "email": "romans_one16@live.com",
       "address": "21000 Middleton Cir., Apt. 21207",
       "id": 2
+    },
+    {
+      "name": "Robert Goulet",
+      "email": "GOULET@goulet.com",
+      "address": "1234 Coconut Bangers Ball Way",
+      "id": 3
     }
   ],
   "quotes": [

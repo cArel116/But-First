@@ -13,6 +13,11 @@ export const Settings = () => {
 
     const history = useHistory();
 
+    const logout = () => {
+        localStorage.clear();
+        history.push("/login");
+    }
+
     return (
         <main style={{ textAlign: "center" }}>
             <div className="settingsBackgroundImg">
@@ -21,11 +26,16 @@ export const Settings = () => {
                         <div className="wrapperDiv">
                             <div className="coffeeSettings">{brewMethodSettings}</div>
                             <div className="weatherSettings">{localWeatherSettings}</div>
-                            <div>
+                            <div className="logout">
                                 <Button variant="primary" size="sm"
                                     className="settingsButton"
                                     onClick={e => history.push("/")}>
                                     Cancel
+                                </Button>
+                                <Button variant="primary" size="sm"
+                                    className="settingsButton"
+                                    onClick={logout}>
+                                    Logout
                                 </Button>
                             </div>
                         </div>
