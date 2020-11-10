@@ -20,7 +20,7 @@
     font-weight: 500;
     text-align: left;
     text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
-    padding-left: .5em;
+    /* padding-left: .5em; */
     width: 100%;
 }
 
@@ -33,6 +33,7 @@
     text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
     text-align: right;
     width: 100%;
+    padding-top: .5em;
 }
 
 .dailyQuote--modal {

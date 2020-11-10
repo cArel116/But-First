@@ -1,4 +1,5 @@
-import React, { useState, createContext, useEffect } from 'react';
+import React, { useState, createContext, useEffect, useContext } from 'react';
+import { LocalWeatherContext } from './LocalWeatherProvider'
 import "./Weather.css"
 
 export const api = {
@@ -9,6 +10,8 @@ export const api = {
 export const WeatherContext = createContext()
 
 export const WeatherApp = () => {
+
+    const { getLocalWeatherWithoutState } = useContext(LocalWeatherContext);
 
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
@@ -24,6 +27,17 @@ export const WeatherApp = () => {
                 });
         }
     }
+
+    useEffect(() => {
+        getLocalWeatherWithoutState().then((response) => {
+            fetch(`${api.base}weather?q=${response[0].city}&units=imperial&APPID=${api.key}`) //**IF YOU WANT FORECAST, IT GOES IN THE WEATHER?Q= LINE TO THE LEFT**
+                .then(res => res.json())
+                .then(result => {
+                    setWeather(result);
+                    console.log(result);
+                });
+        })
+    }, [])
 
     return (
 
@@ -56,46 +70,3 @@ export const WeatherApp = () => {
         </div>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // const userId = parseInt(localStorage.getItem("user"))
-
-
-
-// const [localWeather, setLocalWeather] = useState({});
-
-    //-----------------------------------//------------------------------------//
-
-    // const getUserWeather = () => {
-    //     return fetch(`http://localhost:8088/userSettings/settings/localWeatherSettings/${userId}`)
-    //         .then(res => res.json())
-    // }
-
-    // const getLocalWeather = () => {
-    //     getUserWeather()
-    //         .then(() => {
-    //             return fetch(`${api.base}weather?q=${localWeather}&units=imperial&APPID=${api.key}`)
-    //                 .then(res => res.json())
-    //                 .then(result => {
-    //                     setLocalWeather(result);
-    //                 });
-    //         })
-    // }
-
-    // useEffect(() => {
-    //     getLocalWeather({})
-    // }, [])
-    //----------------------------------//------------------------------------//

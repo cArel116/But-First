@@ -22,12 +22,12 @@ export const BrewMethodProvider = (props) => {
             .then(setBrewMethod)
     }
 
-    const getBrewMethodProfileById = (id) => {
-        return fetch(`http://localhost:8088/coffeeSettings/${id}`)
-            .then(res => res.json())
-    }
+    // const getBrewMethodProfileById = (id) => {
+    //     return fetch(`http://localhost:8088/coffeeSettings/${id}`)
+    //         .then(res => res.json())
+    // }
 
-    const addBrewMethod = brewMethodObj => {
+    const addBrewMethodProfile = brewMethodObj => {
         return fetch("http://localhost:8088/coffeeSettings", {
             method: "POST",
             headers: {
@@ -38,9 +38,9 @@ export const BrewMethodProvider = (props) => {
             .then(getBrewMethod)
     }
 
-    const updateBrewMethod = brewMethod => {
-        return fetch(`http://localhost:8088/coffeeSettings/${brewMethod.id}`, {
-            method: "PUT",
+    const updateBrewMethodProfile = (id, brewMethod) => {
+        return fetch(`http://localhost:8088/coffeeSettings/${id}`, {
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -52,7 +52,7 @@ export const BrewMethodProvider = (props) => {
     return (
 
         <BrewMethodContext.Provider value={{
-            brewMethod, getBrewMethod, getBrewMethodProfile, getBrewMethodById, getBrewMethodProfileById, addBrewMethod, updateBrewMethod
+            brewMethod, getBrewMethod, getBrewMethodProfile, getBrewMethodById, addBrewMethodProfile, updateBrewMethodProfile
         }}>
             {props.children}
         </BrewMethodContext.Provider>

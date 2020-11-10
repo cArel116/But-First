@@ -19,7 +19,7 @@
 
 .wrapperDiv {
     text-align: center;
-    height: 750px;
+    height: 900px;
     overflow-y: scroll;
 }
 
@@ -66,6 +66,7 @@ input {
     min-height: 30px;
     max-height: 50px;
     padding: 1px;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .brewMethodDropdown {
@@ -87,4 +88,12 @@ input {
     box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.weatherSettingsHeader {
+    margin-top: 1.5em;
+}
+
+.logout {
+    margin-top: 4.5em;
 }

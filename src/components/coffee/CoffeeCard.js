@@ -21,7 +21,6 @@ export const CoffeeCard = ({ coffee }) => {
 
     const handleCalculatedInput = (event) => {
         const gramsOutput = (waterInput.current.value * 28) / coffee.ratio
-        console.log("waterInput", waterInput.current.value)
         const newSelectedBrewMethod = { ...selectedBrew }
         newSelectedBrewMethod.grams = gramsOutput
         setSelectedBrew(newSelectedBrewMethod)
