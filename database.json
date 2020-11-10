@@ -43,6 +43,42 @@
       "quote": "Peace if possible, truth at all costs!",
       "author": "Martin Luther",
       "userId": 2
+    },
+    {
+      "id": 5,
+      "quote": "I am looking for someone to share in an adventure that I am arranging, and it's very difficult to find anyone.",
+      "author": "Gandalf",
+      "userId": 2
+    },
+    {
+      "id": 6,
+      "quote": "Every man dies. Not every man really lives.",
+      "author": "William Wallace",
+      "userId": 2
+    },
+    {
+      "id": 7,
+      "quote": "They who would give up an essential liberty for temporary security, deserve neither liberty or security.",
+      "author": "Benjamin Franklin",
+      "userId": 2
+    },
+    {
+      "id": 8,
+      "quote": "To preserve liberty, it is essential that the whole body of people always possess arms, and be taught alike, especially when young, how to use them…",
+      "author": "Richard Henry Lee",
+      "userId": 2
+    },
+    {
+      "id": 9,
+      "quote": "You will never know how much it has cost my generation to preserve your freedom. I hope you will make a good use of it.",
+      "author": "John Adams",
+      "userId": 2
+    },
+    {
+      "id": 10,
+      "quote": "The only thing necessary for the triumph of evil is for good men to do nothing.",
+      "author": "Edmund Burke",
+      "userId": 2
     }
   ],
   "coffees": [
@@ -80,7 +116,7 @@
       "id": 1,
       "name": "A.M. Brew",
       "water": "24",
-      "grams": "",
+      "grams": "42",
       "method": "Drip",
       "userId": 2
     }
