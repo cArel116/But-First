@@ -73,8 +73,8 @@
     {
       "id": 1,
       "name": "A.M. Brew",
-      "water": "24oz",
-      "grams": "42g",
+      "water": "24",
+      "grams": "",
       "method": "Drip",
       "userId": 2
     }

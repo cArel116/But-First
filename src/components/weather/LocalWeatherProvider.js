@@ -45,7 +45,6 @@ export const LocalWeatherProvider = (props) => {
     }
 
     const updateLocalWeather = (id, localWeather) => {
-        console.log("local weather", localWeather)
         return fetch(`http://localhost:8088/localWeatherSettings/${id}`, {
             method: "PATCH",
             headers: {

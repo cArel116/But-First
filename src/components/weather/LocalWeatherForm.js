@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { LocalWeatherContext } from "./LocalWeatherProvider"
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import "./Weather.css"
 import { Button } from "react-bootstrap";
 
@@ -12,11 +12,10 @@ export const LocalWeatherForm = () => {
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
     const [country, setCountry] = useState('');
-    const [zip, setZip] = useState(0);
+    const [zip, setZip] = useState();
 
     const history = useHistory();
 
-    // Get customers and animals. If localWeatherId is in the URL, getLocalWeatherById
     useEffect(() => {
         getLocalWeather()
             .then(setIsLoading(false))
