@@ -9,6 +9,7 @@
 * Run `npm install` in the but-first root directory.
 * Start JSON Server by typing the following command from the but-first root directory: `json-server -p * 8088 -w database.json`
 * Run `npm start` to view application in browser.
+#### * IMPORTANT: This is meant as a MOBILE app and has been formatted as such. For the best and intended experience, please view on Mobile View via your Developer Tools.
 * Begin by registering as a new user. User data will remain on your local machine.
 
 Note: Login and Registration is NOT secure and should be used for DEMO purposes only.
