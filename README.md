@@ -40,6 +40,3 @@ My MVP (minimum viable product) goals for this project were to accomplish the fo
 * Aesthetically pleasing design with coffee, a daily inspirational quote, and the current weather as the basis of the app.
 * A randomly generated daily quote, fully functioning local weather display, and interactive coffee/tea dose/measurement calculator for the perfect “cuppa.”
 * User login/registration.
-
-
-### Links
