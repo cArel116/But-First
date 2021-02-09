@@ -7,7 +7,6 @@ import "../components/nav/NavBar.css"
 import "./Home.css"
 import { QuoteProvider } from "./quote/QuoteProvider";
 import { LocalWeather } from "./weather/LocalWeatherCard";
-// import { LocalWeatherProvider } from "./weather/LocalWeatherProvider";
 
 
 export const Home = () => {

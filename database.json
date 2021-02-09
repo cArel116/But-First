@@ -23,13 +23,13 @@
     {
       "id": 1,
       "quote": "The best confidence builder is experience.",
-      "author": "Star Wars: The Clone Wars",
+      "author": "Anonymous",
       "userId": 2
     },
     {
       "id": 2,
-      "quote": "If you're going to carry a sword, you'd better know how to use it.",
-      "author": "Arathaín Cúthalion",
+      "quote": "One who is full loathes honey, but to one who is hungry everything bitter is sweet.",
+      "author": "Proverbs 27:7, ESV",
       "userId": 2
     },
     {
@@ -46,8 +46,8 @@
     },
     {
       "id": 5,
-      "quote": "I am looking for someone to share in an adventure that I am arranging, and it's very difficult to find anyone.",
-      "author": "Gandalf",
+      "quote": "It's a dangerous business, Frodo, going out your door. You step onto the road, and if you don't keep your feet, there's no knowing where you might be swept off to.",
+      "author": "Bilbo Baggins",
       "userId": 2
     },
     {
@@ -125,7 +125,7 @@
     {
       "id": 1,
       "city": "Franklin",
-      "state": "TENNESSEE",
+      "state": "Tennessee",
       "zip": "37064",
       "country": "United States",
       "userId": 2

@@ -76,7 +76,7 @@ export const BrewMethodForm = () => {
                         event.preventDefault() // Prevent browser from submitting the form
                         constructBrewMethodProfileObject()
                     }}>
-                    Save Method
+                    Save Brew Method
                 </Button>
             </div>
         </>
